@@ -13,9 +13,9 @@ locale in the app settings.
 
 Examples:
 
-- US English: `Thu 12/31/2026`
-- British English: `Thu 31/12/2026`
-- Chinese: `四 2026-12-31`
+- US English: `Thu 12/31`
+- British English: `Thu 31/12`
+- Chinese: `四 12-31`
 
 ## Features
 

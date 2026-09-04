@@ -18,7 +18,7 @@ enum DateDayFormatter {
         let numericDate = formatter(
             locale: locale,
             timeZone: timeZone,
-            template: "yMd"
+            template: "Md"
         ).string(from: date)
 
         return "\(weekday) \(numericDate)"
@@ -51,7 +51,7 @@ enum DateDayFormatter {
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.calendar = calendar
         dateFormatter.timeZone = timeZone
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "MM-dd"
 
         return "\(weekday) \(dateFormatter.string(from: date))"
     }

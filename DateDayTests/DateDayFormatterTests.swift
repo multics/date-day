@@ -7,21 +7,21 @@ struct DateDayFormatterTests {
     @Test
     func formatsUSEnglish() {
         #expect(
-            formatted(localeIdentifier: "en_US") == "Thu 12/31/2026"
+            formatted(localeIdentifier: "en_US") == "Thu 12/31"
         )
     }
 
     @Test
     func respectsBritishDateOrder() {
         #expect(
-            formatted(localeIdentifier: "en_GB") == "Thu 31/12/2026"
+            formatted(localeIdentifier: "en_GB") == "Thu 31/12"
         )
     }
 
     @Test(arguments: ["zh_CN", "zh_TW", "zh_HK"])
     func usesCompactChineseFormat(localeIdentifier: String) {
         #expect(
-            formatted(localeIdentifier: localeIdentifier) == "四 2026-12-31"
+            formatted(localeIdentifier: localeIdentifier) == "四 12-31"
         )
     }
 
