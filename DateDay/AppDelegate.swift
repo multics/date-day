@@ -102,10 +102,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         for name in notifications {
             NotificationCenter.default.addObserver(
                 self,
-                selector: #selector(updateDate),
+                selector: #selector(handleSystemChange),
                 name: name,
                 object: nil
             )
+        }
+    }
+
+    @objc nonisolated private func handleSystemChange() {
+        Task { @MainActor [weak self] in
+            self?.updateDate()
         }
     }
 
