@@ -13,8 +13,8 @@
 - Request: Commit pending project changes and push to GitHub.
 - Scope: Accumulated weather, clock, settings, layout, and approved-helper changes in this workspace, plus documentation and tests. Exclude generated builds and app bundles.
 - Acceptance: Tests pass; changes committed on the current branch; origin contains the commit.
-- Status: Review and verification in progress.
-- Next action: Run tests, update stale README examples, commit, and push to origin.
+- Status: Complete. All 16 tests passed (`Test-DateDay-2026.09.19_06-20-34-+0800.xcresult`); signed Release build and signature checks passed. Updated README examples and menu behavior. Implementation commit `661a657` pushed successfully to `origin/main` at `github.com/multics/date-day`.
+- Next action: None. This completion record is included in a follow-up documentation commit.
 
 ## Disable current clock menu entry
 
