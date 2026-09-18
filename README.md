@@ -11,24 +11,46 @@ and date. It can also show up to three clocks for selected time zones.
 Date Day follows the system locale by default. You can select a different
 locale in the app settings.
 
+Date Day can also show the current temperature in both Celsius and Fahrenheit.
+Weather is optional and is off by default.
+
 Examples:
 
-- US English: `Thu 12/31`
-- British English: `Thu 31/12`
-- Chinese: `四 12-31`
+- US English: `Thu` above `31`
+- British English: `Thu` above `31`
+- Chinese: `四` above `31`
 
 ## Features
 
-- Display a locale-aware weekday and date in the menu bar.
+- Display a locale-aware weekday above the date in the menu bar.
 - Override the system locale with US English, British English, Simplified
   Chinese, or Traditional Chinese.
-- Show one to three clocks to the left of the date.
-- Keep the first clock linked to the system time zone and show it in bold.
-- Select time zones and custom labels for two additional clocks.
+- Show one to three clocks after the date, followed by the temperature.
+- Configure up to three clocks with stable time zones and custom labels.
+- Move clocks that match the Mac system time zone to the first position, while
+  keeping the configured order for the other clocks.
+- Show matching clocks in bold and blink their colons.
+- Click a clock entry in the menu to set the Mac system time zone.
+  Entries follow the menu-bar order. The current zone is disabled; other zones
+  are selectable. Approve the Date Day helper in macOS
+  Login Items & Extensions on first use. Later selections change the time zone
+  directly, without a password or Touch ID prompt from Date Day.
+  Automatic time-zone selection in System Settings can override a manual change.
+- Use thin text for the third displayed clock.
 - Start the app when you log in.
+- Show Celsius and Fahrenheit together in a compact menu-bar block.
+- Show a familiar condition icon between the clocks and temperatures.
+- Use the Mac location or a manually selected city for weather.
+- Refresh weather every 5, 10, 30, or 60 minutes and retain the last successful
+  reading when the network is unavailable.
 
 Date Day uses the Gregorian calendar. Chinese locales use a compact,
 one-character weekday.
+
+Weather data is provided by [Open-Meteo](https://open-meteo.com/). Automatic
+location uses city-level accuracy, and coordinates are rounded before they are
+sent to the weather service. Date Day requests location access only after you
+enable weather with Automatic Location.
 
 ## Requirements
 
@@ -37,6 +59,18 @@ one-character weekday.
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen)
 
 ## Build and run
+
+Time-zone switching requires a signed app and helper. The helper accepts only
+Date Day signed by team `CS276L7FX7`. For a fork, change the team identifier in
+`Shared/TimeZoneHelperProtocol.swift` to your own team and sign both targets
+with that team. Ad-hoc and unsigned builds cannot use the privileged helper.
+The helper exposes only a time-zone operation, validates the zone, and checks
+the client signature and active console user. It does not accept shell commands.
+
+For a signed Release build, pass `CODE_SIGN_STYLE=Manual`,
+`DEVELOPMENT_TEAM=<team-id>`, and `CODE_SIGN_IDENTITY=<certificate-hash>` to
+the Release build command. Keep the app at a stable path after helper approval.
+To revoke helper approval, disable Date Day in macOS Login Items & Extensions.
 
 Generate the Xcode project, run the tests, and build the Release app:
 

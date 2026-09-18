@@ -7,21 +7,33 @@ struct DateDayFormatterTests {
     @Test
     func formatsUSEnglish() {
         #expect(
-            formatted(localeIdentifier: "en_US") == "Thu 12/31"
+            formatted(localeIdentifier: "en_US") == "Thu 31"
         )
     }
 
     @Test
     func respectsBritishDateOrder() {
         #expect(
-            formatted(localeIdentifier: "en_GB") == "Thu 31/12"
+            formatted(localeIdentifier: "en_GB") == "Thu 31"
         )
+    }
+
+    @Test
+    func separatesWeekdayAndDateForStackedRendering() {
+        let components = DateDayFormatter.components(
+            for: testDate,
+            locale: Locale(identifier: "en_US"),
+            timeZone: utc
+        )
+
+        #expect(components.weekday == "Thu")
+        #expect(components.date == "31")
     }
 
     @Test(arguments: ["zh_CN", "zh_TW", "zh_HK"])
     func usesCompactChineseFormat(localeIdentifier: String) {
         #expect(
-            formatted(localeIdentifier: localeIdentifier) == "四 12-31"
+            formatted(localeIdentifier: localeIdentifier) == "四 31"
         )
     }
 
@@ -56,6 +68,14 @@ struct DateDayFormatterTests {
     }
 
     private func formatted(localeIdentifier: String) -> String {
+        DateDayFormatter.string(
+            for: testDate,
+            locale: Locale(identifier: localeIdentifier),
+            timeZone: utc
+        )
+    }
+
+    private var testDate: Date {
         var components = DateComponents()
         components.calendar = Calendar(identifier: .gregorian)
         components.timeZone = utc
@@ -64,10 +84,6 @@ struct DateDayFormatterTests {
         components.day = 31
         components.hour = 12
 
-        return DateDayFormatter.string(
-            for: components.date!,
-            locale: Locale(identifier: localeIdentifier),
-            timeZone: utc
-        )
+        return components.date!
     }
 }

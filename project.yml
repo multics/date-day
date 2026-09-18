@@ -13,6 +13,18 @@ targets:
     platform: macOS
     sources:
       - path: DateDay
+      - path: Shared
+      - path: Helper/com.yongtian.DateDay.TimeZoneHelper.plist
+        buildPhase:
+          copyFiles:
+            destination: wrapper
+            subpath: Contents/Library/LaunchDaemons
+    dependencies:
+      - target: DateDayTimeZoneHelper
+        embed: true
+        codeSign: false
+        copy:
+          destination: executables
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yongtian.DateDay
@@ -21,15 +33,34 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: Date Day
         INFOPLIST_KEY_LSUIElement: YES
+        INFOPLIST_KEY_NSLocationUsageDescription: Date Day uses your location to show local weather in the menu bar.
         MARKETING_VERSION: 1.0
         CURRENT_PROJECT_VERSION: 1
         CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: YES
+  DateDayTimeZoneHelper:
+    type: tool
+    platform: macOS
+    sources:
+      - path: Helper/main.swift
+      - path: Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yongtian.DateDay.TimeZoneHelper
+        OTHER_CODE_SIGN_FLAGS: "--identifier com.yongtian.DateDay.TimeZoneHelper"
+        SWIFT_VERSION: 5.0
+        ENABLE_HARDENED_RUNTIME: YES
+        ENABLE_DEBUG_DYLIB: NO
   DateDayTests:
     type: bundle.unit-test
     platform: macOS
     sources:
       - path: DateDayTests
       - path: DateDay/DateDayFormatter.swift
+      - path: DateDay/WorldClockPreference.swift
+      - path: DateDay/WeatherModels.swift
+      - path: DateDay/WeatherClient.swift
+      - path: DateDay/StatusContentRenderer.swift
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.yongtian.DateDayTests

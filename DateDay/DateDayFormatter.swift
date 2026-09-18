@@ -1,13 +1,13 @@
 import Foundation
 
 enum DateDayFormatter {
-    static func string(
+    static func components(
         for date: Date,
         locale: Locale,
         timeZone: TimeZone
-    ) -> String {
+    ) -> (weekday: String, date: String) {
         if locale.language.languageCode?.identifier == "zh" {
-            return chineseString(for: date, timeZone: timeZone)
+            return chineseComponents(for: date, timeZone: timeZone)
         }
 
         let weekday = formatter(
@@ -18,10 +18,22 @@ enum DateDayFormatter {
         let numericDate = formatter(
             locale: locale,
             timeZone: timeZone,
-            template: "Md"
+            template: "d"
         ).string(from: date)
+        return (weekday, numericDate)
+    }
 
-        return "\(weekday) \(numericDate)"
+    static func string(
+        for date: Date,
+        locale: Locale,
+        timeZone: TimeZone
+    ) -> String {
+        let components = components(
+            for: date,
+            locale: locale,
+            timeZone: timeZone
+        )
+        return "\(components.weekday) \(components.date)"
     }
 
     static func timeString(
@@ -37,10 +49,10 @@ enum DateDayFormatter {
         return formatter.string(from: date)
     }
 
-    private static func chineseString(
+    private static func chineseComponents(
         for date: Date,
         timeZone: TimeZone
-    ) -> String {
+    ) -> (weekday: String, date: String) {
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = timeZone
 
@@ -51,9 +63,9 @@ enum DateDayFormatter {
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.calendar = calendar
         dateFormatter.timeZone = timeZone
-        dateFormatter.dateFormat = "MM-dd"
+        dateFormatter.dateFormat = "d"
 
-        return "\(weekday) \(dateFormatter.string(from: date))"
+        return (weekday, dateFormatter.string(from: date))
     }
 
     private static func formatter(

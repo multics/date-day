@@ -8,37 +8,117 @@
 
 /* Begin PBXBuildFile section */
 		02561DFB015549744B89A8C4 /* DateDayFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E8FB5BDA410D31BBC7A92 /* DateDayFormatter.swift */; };
+		037DC2A9016F16B7F2660C88 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6B534C5418DA1AC20DFD1E /* WeatherClient.swift */; };
+		06809959A52D6875AC958E8A /* StatusContentRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768066319BAAFD8A4F577CEC /* StatusContentRendererTests.swift */; };
 		1C5437079BB0855FF95C758C /* StatusContentRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D629BD2B569D4619C2C4073 /* StatusContentRenderer.swift */; };
 		2310A44427B462E025030D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D515676FE49A699BDCAF99F /* Assets.xcassets */; };
+		249998A27FC145D73325185F /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2499E2A2E993DF51D7AF20 /* WeatherModels.swift */; };
+		28A54EA306C3ED2BB210ECFB /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6B534C5418DA1AC20DFD1E /* WeatherClient.swift */; };
 		2BC8BFD508C90DFC033F8104 /* DateDayFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E8FB5BDA410D31BBC7A92 /* DateDayFormatter.swift */; };
+		3F7069F135F59D6A99C24609 /* WorldClockDisplayResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E998C37B8F58954A209557D /* WorldClockDisplayResolverTests.swift */; };
 		52F22CBB09F1F51505BE863A /* WorldClockPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DA689BB27E99591F358BE /* WorldClockPreference.swift */; };
+		68349A4824B835665C99C9D2 /* DateDayTimeZoneHelper in Embed Dependencies */ = {isa = PBXBuildFile; fileRef = 3F4E268D2B1E61A5B89FD723 /* DateDayTimeZoneHelper */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		69EBFC8E5405C077F1BB499B /* WorldClockPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DA689BB27E99591F358BE /* WorldClockPreference.swift */; };
 		76FDBA16389E417CD3A10B8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF14239375F4697C5DA5B80 /* AppDelegate.swift */; };
+		7C7D786934EC7667FDD7853C /* com.yongtian.DateDay.TimeZoneHelper.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43B2692052FAF0CF7A101D42 /* com.yongtian.DateDay.TimeZoneHelper.plist */; };
+		81938E7013C1D76DFE096C7F /* TimeZoneAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BEECC8905BE94DB671738 /* TimeZoneAuthorization.swift */; };
+		83BCB0C5835E0110ED826BEA /* TimeZoneHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6E9FADA4DD5AB7D0B9848C /* TimeZoneHelperProtocol.swift */; };
 		926234663C8F6E546DC6BE7F /* DateDayFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6594C977DD9856CD80F0D10 /* DateDayFormatterTests.swift */; };
+		A4B395E0EC15150A972A1A04 /* WeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2499E2A2E993DF51D7AF20 /* WeatherModels.swift */; };
 		A8CC44815BF0D1742DDC8743 /* DateDayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6878AF5C901D5E997B4148 /* DateDayApp.swift */; };
+		A98317008596596675C96E3C /* WeatherStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB422FEFAD1FD4C137435C8B /* WeatherStore.swift */; };
+		B2445DD80953EDA38BB7D329 /* StatusContentRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D629BD2B569D4619C2C4073 /* StatusContentRenderer.swift */; };
+		BD5993A80191630A42AFD9C3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DD9D1BB9BD2182A503794B /* main.swift */; };
 		C4D6BE9D990FD54005E0BE91 /* LocalePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D803E9876BD7E25F285B40C /* LocalePreference.swift */; };
+		CB8A3832AF3F2228E9280716 /* TimeZoneHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC6E9FADA4DD5AB7D0B9848C /* TimeZoneHelperProtocol.swift */; };
 		DCA391DE0D9E1DE6F0BE8E3C /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1211DFD20FCA319290FD15D3 /* SettingsWindowController.swift */; };
+		F6AA2EFD0C504528D92E5710 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A19394AE49EFB7B03F3F849 /* WeatherTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3258E2D7093AD1166E35218B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56129416FC32391F6F554CAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33D5558E91E1ADA5C01F6285;
+			remoteInfo = DateDayTimeZoneHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		139F8E8572FE3290E0A3FF6C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+				7C7D786934EC7667FDD7853C /* com.yongtian.DateDay.TimeZoneHelper.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E419DC1DD5546CC045BA5078 /* Embed Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				68349A4824B835665C99C9D2 /* DateDayTimeZoneHelper in Embed Dependencies */,
+			);
+			name = "Embed Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1211DFD20FCA319290FD15D3 /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		1D2499E2A2E993DF51D7AF20 /* WeatherModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModels.swift; sourceTree = "<group>"; };
 		1D515676FE49A699BDCAF99F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		386BEECC8905BE94DB671738 /* TimeZoneAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneAuthorization.swift; sourceTree = "<group>"; };
+		3F4E268D2B1E61A5B89FD723 /* DateDayTimeZoneHelper */ = {isa = PBXFileReference; includeInIndex = 0; path = DateDayTimeZoneHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B2692052FAF0CF7A101D42 /* com.yongtian.DateDay.TimeZoneHelper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = com.yongtian.DateDay.TimeZoneHelper.plist; sourceTree = "<group>"; };
 		4D629BD2B569D4619C2C4073 /* StatusContentRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusContentRenderer.swift; sourceTree = "<group>"; };
 		4D803E9876BD7E25F285B40C /* LocalePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalePreference.swift; sourceTree = "<group>"; };
+		4E998C37B8F58954A209557D /* WorldClockDisplayResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockDisplayResolverTests.swift; sourceTree = "<group>"; };
+		6A6B534C5418DA1AC20DFD1E /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		7074654C82046DBF83738CB9 /* DateDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		768066319BAAFD8A4F577CEC /* StatusContentRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusContentRendererTests.swift; sourceTree = "<group>"; };
 		928E8FB5BDA410D31BBC7A92 /* DateDayFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDayFormatter.swift; sourceTree = "<group>"; };
+		9A19394AE49EFB7B03F3F849 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		9E578E9B252076DC0E11107D /* DateDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC6E9FADA4DD5AB7D0B9848C /* TimeZoneHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneHelperProtocol.swift; sourceTree = "<group>"; };
 		CC6878AF5C901D5E997B4148 /* DateDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDayApp.swift; sourceTree = "<group>"; };
+		DB422FEFAD1FD4C137435C8B /* WeatherStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStore.swift; sourceTree = "<group>"; };
 		E58DA689BB27E99591F358BE /* WorldClockPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockPreference.swift; sourceTree = "<group>"; };
 		E6594C977DD9856CD80F0D10 /* DateDayFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDayFormatterTests.swift; sourceTree = "<group>"; };
+		E9DD9D1BB9BD2182A503794B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EDF14239375F4697C5DA5B80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		19418FF02E23184CA8C2E368 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				BC6E9FADA4DD5AB7D0B9848C /* TimeZoneHelperProtocol.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2BAF5D499BB0EB6BF79A6DC0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				43B2692052FAF0CF7A101D42 /* com.yongtian.DateDay.TimeZoneHelper.plist */,
+				E9DD9D1BB9BD2182A503794B /* main.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		4241633329B146B2E935196E = {
 			isa = PBXGroup;
 			children = (
 				49E9DB0AB2E3431E05A3DCB5 /* DateDay */,
 				F3A8789A25561FAA3365F565 /* DateDayTests */,
+				2BAF5D499BB0EB6BF79A6DC0 /* Helper */,
+				19418FF02E23184CA8C2E368 /* Shared */,
 				9EE658DEDC71FE2ECC951C27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +133,10 @@
 				4D803E9876BD7E25F285B40C /* LocalePreference.swift */,
 				1211DFD20FCA319290FD15D3 /* SettingsWindowController.swift */,
 				4D629BD2B569D4619C2C4073 /* StatusContentRenderer.swift */,
+				386BEECC8905BE94DB671738 /* TimeZoneAuthorization.swift */,
+				6A6B534C5418DA1AC20DFD1E /* WeatherClient.swift */,
+				1D2499E2A2E993DF51D7AF20 /* WeatherModels.swift */,
+				DB422FEFAD1FD4C137435C8B /* WeatherStore.swift */,
 				E58DA689BB27E99591F358BE /* WorldClockPreference.swift */,
 			);
 			path = DateDay;
@@ -63,6 +147,7 @@
 			children = (
 				9E578E9B252076DC0E11107D /* DateDay.app */,
 				7074654C82046DBF83738CB9 /* DateDayTests.xctest */,
+				3F4E268D2B1E61A5B89FD723 /* DateDayTimeZoneHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				E6594C977DD9856CD80F0D10 /* DateDayFormatterTests.swift */,
+				768066319BAAFD8A4F577CEC /* StatusContentRendererTests.swift */,
+				9A19394AE49EFB7B03F3F849 /* WeatherTests.swift */,
+				4E998C37B8F58954A209557D /* WorldClockDisplayResolverTests.swift */,
 			);
 			path = DateDayTests;
 			sourceTree = "<group>";
@@ -84,10 +172,13 @@
 			buildPhases = (
 				9D2C869F1BEEF4D688F87B9D /* Sources */,
 				360C8C9258A9A881A9D3D4AF /* Resources */,
+				139F8E8572FE3290E0A3FF6C /* CopyFiles */,
+				E419DC1DD5546CC045BA5078 /* Embed Dependencies */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				52C1F38E6A23750B733AB887 /* PBXTargetDependency */,
 			);
 			name = DateDay;
 			packageProductDependencies = (
@@ -95,6 +186,23 @@
 			productName = DateDay;
 			productReference = 9E578E9B252076DC0E11107D /* DateDay.app */;
 			productType = "com.apple.product-type.application";
+		};
+		33D5558E91E1ADA5C01F6285 /* DateDayTimeZoneHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DC27F48211CD7D675278779 /* Build configuration list for PBXNativeTarget "DateDayTimeZoneHelper" */;
+			buildPhases = (
+				06D861D5964831C775F5D366 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DateDayTimeZoneHelper;
+			packageProductDependencies = (
+			);
+			productName = DateDayTimeZoneHelper;
+			productReference = 3F4E268D2B1E61A5B89FD723 /* DateDayTimeZoneHelper */;
+			productType = "com.apple.product-type.tool";
 		};
 		C1AF30237E6156AB1F24B54A /* DateDayTests */ = {
 			isa = PBXNativeTarget;
@@ -142,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				2ABD793848F0E48B315D32F1 /* DateDay */,
+				33D5558E91E1ADA5C01F6285 /* DateDayTimeZoneHelper */,
 				C1AF30237E6156AB1F24B54A /* DateDayTests */,
 			);
 		};
@@ -159,6 +268,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		06D861D5964831C775F5D366 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83BCB0C5835E0110ED826BEA /* TimeZoneHelperProtocol.swift in Sources */,
+				BD5993A80191630A42AFD9C3 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D2C869F1BEEF4D688F87B9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -169,6 +287,11 @@
 				C4D6BE9D990FD54005E0BE91 /* LocalePreference.swift in Sources */,
 				DCA391DE0D9E1DE6F0BE8E3C /* SettingsWindowController.swift in Sources */,
 				1C5437079BB0855FF95C758C /* StatusContentRenderer.swift in Sources */,
+				81938E7013C1D76DFE096C7F /* TimeZoneAuthorization.swift in Sources */,
+				CB8A3832AF3F2228E9280716 /* TimeZoneHelperProtocol.swift in Sources */,
+				28A54EA306C3ED2BB210ECFB /* WeatherClient.swift in Sources */,
+				249998A27FC145D73325185F /* WeatherModels.swift in Sources */,
+				A98317008596596675C96E3C /* WeatherStore.swift in Sources */,
 				52F22CBB09F1F51505BE863A /* WorldClockPreference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,12 +302,44 @@
 			files = (
 				2BC8BFD508C90DFC033F8104 /* DateDayFormatter.swift in Sources */,
 				926234663C8F6E546DC6BE7F /* DateDayFormatterTests.swift in Sources */,
+				B2445DD80953EDA38BB7D329 /* StatusContentRenderer.swift in Sources */,
+				06809959A52D6875AC958E8A /* StatusContentRendererTests.swift in Sources */,
+				037DC2A9016F16B7F2660C88 /* WeatherClient.swift in Sources */,
+				A4B395E0EC15150A972A1A04 /* WeatherModels.swift in Sources */,
+				F6AA2EFD0C504528D92E5710 /* WeatherTests.swift in Sources */,
+				3F7069F135F59D6A99C24609 /* WorldClockDisplayResolverTests.swift in Sources */,
+				69EBFC8E5405C077F1BB499B /* WorldClockPreference.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		52C1F38E6A23750B733AB887 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33D5558E91E1ADA5C01F6285 /* DateDayTimeZoneHelper */;
+			targetProxy = 3258E2D7093AD1166E35218B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		55D2590D8DC756694213FCD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--identifier com.yongtian.DateDay.TimeZoneHelper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongtian.DateDay.TimeZoneHelper;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
 		58569492FABDA2F1FFC9871C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,9 +482,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Date Day";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Date Day uses your location to show local weather in the menu bar.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -364,9 +521,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Date Day";
 				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Date Day uses your location to show local weather in the menu bar.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -377,6 +536,23 @@
 				SDKROOT = macosx;
 			};
 			name = Debug;
+		};
+		FA793907D4E903A9E4CD799D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--identifier com.yongtian.DateDay.TimeZoneHelper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongtian.DateDay.TimeZoneHelper;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -395,6 +571,15 @@
 			buildConfigurations = (
 				58569492FABDA2F1FFC9871C /* Debug */,
 				8DFF576A16CFE51B998C8FD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3DC27F48211CD7D675278779 /* Build configuration list for PBXNativeTarget "DateDayTimeZoneHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D2590D8DC756694213FCD8 /* Debug */,
+				FA793907D4E903A9E4CD799D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
