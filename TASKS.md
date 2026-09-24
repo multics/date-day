@@ -1,5 +1,19 @@
 # Task record
 
+## Automatic weather diagnosis (2026-09-23)
+
+- Request: Determine why weather using the Mac location produces no result.
+- Scope: Read-only source, permission, request, and runtime inspection. No app or system-settings changes requested.
+- Acceptance: Identify the failed stage with evidence; distinguish confirmed cause from possible contributing bugs.
+- Status: Diagnosis complete. No application code, permissions, or settings changed.
+- Runtime evidence: DateDay PID 16198 requested a location at 21:37:50.763 on 2026-09-23 (system-log local time). CoreLocation logged `onLocationRequestTimeout` at 21:38:00.772, but remained active; repeated requests at 21:39:49/52 were ignored as ongoing. At 21:41:01, locationd logged a roughly 302-second scan age, zero usable cached Wi-Fi access points, then started a fresh scan. Three usable access points produced a fix and delegate callback at 21:41:02.252. The weather HTTP request completed with status 200 at 21:41:04.059. Read via `log show` for process DateDay/locationd in that time interval.
+- Current state: Settings UI shows Automatic, Authorization Granted, and Last updated 21:41. Stored snapshot mode is automatic. Weather recovered before inspection completed.
+- Cause: macOS location acquisition waited roughly 3 minutes 12 seconds for a usable Wi-Fi fix; forecast retrieval succeeded approximately 2 seconds after the fix. The app has no bounded location wait/recovery and labels all stages as refreshing, amplifying the apparent stall.
+- Additional confirmed UI bug: SettingsWindowController.swift:657 displays saved manualLocation whenever present, even in automatic mode. Thus the UI shows the previous manual city while weather uses the detected location.
+- Recommended change (not implemented): Add bounded location waiting and clean cancellation/retry; distinguish locating from fetching weather; show the active-mode location. Retain valid automatic cached weather while reacquiring location.
+- Next action: None for diagnosis. Implementation requires a user request to fix these behaviors.
+- Delivery request: User requested a push. Only this diagnosis record changed; commit and push it to origin/main. The recommended app fixes are not implemented.
+
 ## Match menu clock order to menu bar
 
 - Request: Menu clock entries must follow the menu-bar clock order.
